@@ -26,7 +26,9 @@ export default {
   data() {
     return {
       outputText: "",
+      // 当前打印字符串Index
       currentTextCount: 1,
+      // 当前打印数组指针
       currentTextArrayIndex: 0,
       timer: Number,
       logPrefix: "typewriter[log]: ",
@@ -70,7 +72,8 @@ export default {
       if (this.currentTextArrayIndex >= this.texts.length) {
         // 往回打印的情况
         if (this.isBack) {
-          this.currentTextArrayIndex = this.currentTextCount = 0;
+          this.currentTextArrayIndex = 0;
+          this.currentTextCount = 1;
         } else {
           return;
         }
@@ -143,7 +146,7 @@ export default {
       }
     },
     backWriterArray() {
-      if (this.currentTextCount >= 1) {
+      if (this.currentTextCount >= 0) {
         this.outputText = this.texts[this.currentTextArrayIndex].substring(
           0,
           this.currentTextCount
