@@ -9,7 +9,7 @@
 </head>
 
 <body>
-      <div>
+      <div class="welcome">
         <typewriter
           :texts="welcomeText"
           :wspeed="200"
@@ -22,7 +22,12 @@ import Typerwriter from './typewriter.vue'
 const typerwriter =  createApp(Typerwriter )
 typerwriter .mount('#typerwriter')
 </script>
-
+<style>
+  .welcome {
+   width: 100%;
+    height: 50px;
+  }
+  </style>
 
 </body>
 
