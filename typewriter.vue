@@ -89,13 +89,13 @@ export default {
           );
           this.currentTextCount++;
         } else {
-          // 当前字符串打印完，指向下一个并把索引归0
+          // 当前字符串打印完，指向下一个并把索引归1
           // 判断是否需要向后消除打印
           if (this.isBack) {
             this.forwadFlag = false;
           } else {
             this.currentTextArrayIndex++;
-            this.currentTextCount = 0;
+            this.currentTextCount = 1;
           }
         }
       } else {
