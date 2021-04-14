@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    typewriter
+  </title>
+</head>
+
+<body>
+      <div>
+        <typewriter
+          :texts="welcomeText"
+          :wspeed="200"
+        ></typewriter>
+      </div>
+
+<script type="module">
+import{createApp} from 'https://unpkg.com/vue@next'
+import Typerwriter from './typewriter.vue'
+const typerwriter =  createApp(Typerwriter )
+typerwriter .mount('#typerwriter')
+</script>
+
+
+</body>
+
+</html>
